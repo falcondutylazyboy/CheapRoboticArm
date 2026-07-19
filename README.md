@@ -6,12 +6,18 @@ This project allows you to control a robotic arm (arm + gripper) via a web inter
 - **Autonomous Access Point:** Creates its own Wi-Fi network (`ESP32_Robot_Control`).
 - **Smooth Touch Control:** Supports long-press actions for continuous movement on both smartphones and computers.
 - **Motion Smoothing:** Uses a gradual progression algorithm to prevent mechanical jerks/jitters.
-- **Minimal Configuration:** Uses only native ESP32 libraries and the `ESP32Servo` library.
+- **Minimal Configuration:** Uses native ESP32 libraries.
 
 ## 🛠 Required Hardware
 - 1x ESP32 (DevKit V1 recommended)
 - 2x **SG90 180° Servomotors**
 - Power supply for servos (e.g., 5V battery pack)
+
+## 📦 Dependencies
+To compile this project, you must install the following library via the Arduino IDE Library Manager:
+- **ESP32Servo** (by Kevin Harrington)
+
+*Note: Ensure your Arduino IDE is configured with the "ESP32 Board Manager" package.*
 
 ## 🔌 Wiring
 | Component | ESP32 Pin |
@@ -24,9 +30,11 @@ This project allows you to control a robotic arm (arm + gripper) via a web inter
 *Note: Ensure all Ground (GND) pins (ESP32 and Power Supply) are connected together to maintain a common ground.*
 
 ## ⚙️ Installation
-1. Install the `ESP32Servo` library in your Arduino IDE (via the Library Manager).
-2. Copy the provided source code into a new sketch.
-3. Upload the code to your ESP32.
+1. Open the Arduino IDE.
+2. Go to **Sketch > Include Library > Manage Libraries...**
+3. Search for **"ESP32Servo"** and click **Install**.
+4. Copy the provided source code into a new sketch.
+5. Select your ESP32 board in **Tools > Board** and upload the code.
 
 ## 📱 Usage
 1. On your smartphone or computer, scan for available Wi-Fi networks.
